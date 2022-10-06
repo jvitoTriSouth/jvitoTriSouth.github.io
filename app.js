@@ -44,3 +44,5 @@ function fizzbuzz() {
     counter++;
   } while (counter <= 100);
 }
+
+fizzbuzz();
