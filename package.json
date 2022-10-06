@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "firebase": "^9.10.0"
+  },
+  "devDependencies": {
+    "prettier": "2.7.1"
+  }
+}
