@@ -32,3 +32,15 @@ const snapshot = db.collection('Jobs').get();
 snapshot.forEach((doc) => {
   console.log(doc.id, '=>', doc.data());
 });
+
+function fizzbuzz() {
+  let counter = 1;
+  do {
+    if (counter % 15) console.log('FizzBuzz');
+    else if (counter % 5) console.log('Buzz');
+    else if (counter % 3) console.log('Fizz');
+    else console.log(counter);
+
+    counter++;
+  } while (counter <= 100);
+}
