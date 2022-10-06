@@ -27,3 +27,8 @@ function jobSelected() {
   para.appendChild(node);
   document.getElementById('Current Jobs').appendChild(para);
 }
+
+const snapshot = await db.collection('Jobs').get();
+snapshot.forEach((doc) => {
+  console.log(doc.id, '=>', doc.data());
+});
