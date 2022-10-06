@@ -1,4 +1,5 @@
-import { initializeApp } from 'firebase/app';
+const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
+const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAme-haABkY4FamDDkAUtx7brTvPWRlNGg',
@@ -10,7 +11,11 @@ const firebaseConfig = {
   measurementId: 'G-4WF2LEFN9J',
 };
 
-const app = initializeApp(firebaseConfig);
+initializeApp({
+  credential: applicationDefault(),
+});
+
+const db = getFirestore();
 
 function jobSelected() {
   let nodeValue = document.getElementById('C220060R').textContent;
